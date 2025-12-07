@@ -20,7 +20,7 @@ export function EmblaCarousel() {
     const slides = [
         {
             id: 1,
-            image: "/images/image-top.jpeg",
+            image: "/images/imagem-a.png",
             alt: "Top Image",
         },
         {
