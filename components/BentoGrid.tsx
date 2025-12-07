@@ -10,7 +10,7 @@ export function BentoGrid() {
   return (
     <div className="mx-auto my-20 w-full max-w-7xl px-4 md:px-8">
       <Header>
-        <h2 className="text-bold text-neutral-8000 mx-auto w-fit text-center font-sans text-xl font-bold tracking-tight text-neutral-800 md:text-4xl dark:text-neutral-100">
+        <h2 className="text-bold text-neutral-8000 mx-auto w-fit text-center font-sans text-xl font-bold tracking-tight text-neutral-800 md:text-6xl dark:text-neutral-100">
           O que você aprenderá nesta reunião?
         </h2>
       </Header>
