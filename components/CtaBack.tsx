@@ -43,15 +43,15 @@ export function CtaBack() {
       </div>
       <div className="relative flex h-full max-h-[200px] w-full gap-4 overflow-hidden px-4 md:max-h-[400px]">
         <img
-          src="/images/image-top.jpeg"
+          src="/envato-labs-image-edit.webp"
           alt="cta-1"
-          width="300"
-          height="500"
-          className="mt-4 h-full rounded-lg object-cover object-top md:mt-0 md:rounded-none"
+          width="250"
+          height="400"
+          className="mt-4 h-full rounded-lg object-contain md:mt-0 md:rounded-none"
         />
         <img
-          src="https://assets.aceternity.com/pro/cta-2.jpg"
-          alt="cta-1"
+          src="/euro-up.png"
+          alt="cta-2"
           width="300"
           height="500"
           className="mt-10 h-full rounded-lg object-cover object-top"

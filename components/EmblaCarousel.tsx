@@ -2,10 +2,14 @@
 
 import React, { useEffect } from 'react'
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from 'embla-carousel-autoplay';
 import Image from "next/image";
 
 export function EmblaCarousel() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+        { loop: true },
+        [Autoplay({ delay: 2000, stopOnInteraction: false })]
+    )
 
     useEffect(() => {
         if (emblaApi) {
