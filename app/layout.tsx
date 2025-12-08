@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
 import { TrackingInit } from "./components/trackingInit";
 import { AmplitudeInit } from "@/components/AmplitudeInit";
+import { FacebookPixelInit } from "./components/FacebookPixelInit";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,9 +35,8 @@ export default function RootLayout({
           data-website-id="619d2723-ec69-4ba5-9a28-1c7ca43dec5c"
         />
 
-       {/* 1. O Script Principal do Pixel */}
+        {/* Facebook Pixel - Base Script (sem init ainda) */}
         <Script id="facebook-pixel" strategy="afterInteractive">
-
           {`!function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -45,19 +45,19 @@ export default function RootLayout({
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1363853995230465');
-          fbq('track', 'PageView');`}
+
+          // Init será feito pelo FacebookPixelInit com dados hasheados`}
         </Script>
 
-<noscript>
-  
-  <img height="1"
-  width="1" 
-  style={{display:"none"}}
-  src="https://www.facebook.com/tr?id=1363853995230465&ev=PageView&noscript=1"
-  alt="Facebook Pixel"
-/></noscript>
-      
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1363853995230465&ev=PageView&noscript=1"
+            alt="Facebook Pixel"
+          />
+        </noscript>
       </head>
    
 
@@ -66,7 +66,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
          <AmplitudeInit />
           <TrackingInit />
-     
+          <FacebookPixelInit />
+       
+
           {children}
         </ThemeProvider>
 

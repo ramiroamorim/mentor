@@ -193,6 +193,31 @@ export async function sendTrackingEventMentorBio(): Promise<void> {
     });
 }
 
+// Função para salvar dados de usuário no localStorage (para envio hasheado ao Facebook)
+export function setUserData(userData: {
+    email?: string;
+    phone?: string;
+    firstName?: string;
+    lastName?: string;
+    city?: string;
+    state?: string;
+    country?: string;
+    zipCode?: string;
+}): void {
+    if (typeof window === 'undefined') return;
+
+    // Salvar no localStorage para que o FacebookPixelInit possa pegar e hashear
+    localStorage.setItem('userData', JSON.stringify(userData));
+
+    console.log('Dados de usuário salvos. Serão hasheados e enviados ao Facebook Pixel.');
+}
+
+// Função para limpar dados de usuário
+export function clearUserData(): void {
+    if (typeof window === 'undefined') return;
+    localStorage.removeItem('userData');
+}
+
 export function useTracking() {
     return {
         getTrackingData,
@@ -201,5 +226,7 @@ export function useTracking() {
         initializeTracking,
         sendTrackingEvent,
         sendTrackingEventMentorBio,
+        setUserData,
+        clearUserData,
     };
 }
