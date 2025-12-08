@@ -17,7 +17,7 @@ export function HeroSectionWithNoiseBackground() {
   };
 
   return (
-    <div className="relative flex w-full items-center justify-center overflow-hidden bg-white px-4 py-20 md:py-40 dark:bg-black">
+    <div className="relative flex w-full items-center justify-center overflow-hidden bg-white px-5 py-20 md:py-40 dark:bg-black">
       <Background />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl">
@@ -30,14 +30,7 @@ export function HeroSectionWithNoiseBackground() {
         >
           R$160.000 de lucro liquido <br /> em apenas 7 dias
         </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.2 }}
-          className="mx-auto mt-4 max-w-lg text-center font-bold text-sm text-neutral-600 md:text-xl dark:text-neutral-400"
-        >
-          Apenas vendendo infoprodutos <br /> no formato de E-books e assinaturas
-        </motion.p>
+     
 
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -45,7 +38,7 @@ export function HeroSectionWithNoiseBackground() {
           transition={{ duration: 0.3, delay: 0.2 }}
           className="flex flex-col items-center gap-4 md:flex-row"
         >
-          <div className="mt-8 flex w-full flex-col justify-center gap-4 sm:flex-row">
+          <div className="mt-12 flex w-full flex-col justify-center gap-4 sm:flex-row">
 
             <button onClick={handleClick} className="rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-6 py-3 text-base font-medium text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] hover:from-red-700 hover:to-red-800 transition-all duration-200">
               AGENDAR MINHA REUNIÃO
@@ -144,12 +137,17 @@ const Background = () => {
 
 const Noise = () => {
   return (
-    <div
-      className="absolute inset-0 h-full w-full scale-[1.2] transform opacity-[0.05] [mask-image:radial-gradient(#fff,transparent,75%)]"
-      style={{
-        backgroundImage: "url('/images/noise.webp')",
-        backgroundSize: "30%",
-      }}
-    ></div>
+    <>
+      <div
+        className="absolute inset-0 h-full w-full"
+        style={{
+          backgroundImage: "url('/images/impossivel.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-black/60"></div>
+    </>
   );
 };
