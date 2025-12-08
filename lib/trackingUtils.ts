@@ -89,25 +89,34 @@ export function getTrackingData(): UserTrackingData {
         });
     }
 
-    // FBC - CORRIGIDO
-    const urlParams = new URLSearchParams(window.location.search);
-    const fbclid = urlParams.get('fbclid');
-    let fbc = Cookies.get('_fbc');
+   // 1. Captura o fbclid da URL
+const urlParams = new URLSearchParams(window.location.search);
+const fbclid = urlParams.get('fbclid');
 
-    if (fbclid && !fbc) {
-        const subdomainIndex = getSubdomainIndex(); // CORRIGIDO
-        fbc = `fb.${subdomainIndex}.${Date.now()}.${fbclid}`; // CORRIGIDO
-        Cookies.set('_fbc', fbc, {
-            expires: 90,
-            domain: cookieDomain,
-            sameSite: 'lax'
-        });
-        console.log('FBC criado:', fbc);
-    }
+
+if (fbclid) {
+    
+
+    const subdomainIndex = 1; 
+    
+
+    const fbcValue = `fb.${subdomainIndex}.${Date.now()}.${fbclid}`;
+
+    
+    Cookies.set('_fbc', fbcValue, {
+        expires: 90, 
+        domain: cookieDomain, 
+        path: '/',
+        sameSite: 'Lax' // Alguns navegadores exigem L maiúsculo dependendo da lib
+    });
+
+    console.log('FBC Atualizado via URL:', fbcValue);
+} 
+// Opcional: Se não tem fbclid na URL, o cookie antigo permanece válido e o servidor o lerá normalmente.
 
     return {
         fbp,
-        fbc,
+        fbc: Cookies.get('_fbc'),
         external_id,
         event_id: generateUUID(),
         event_time: Math.floor(Date.now() / 1000),
