@@ -54,7 +54,7 @@ export function BentoGrid() {
           <CardContent className="h-40">
             <CardTitle>ESTOU A 3 ANOS NO MERCADO!</CardTitle>
             <CardDescription>
-              VENDENDO PARA MAIS DE 193 PAÍSES AO REDOR DO MUNDO! 
+              VENDENDO  193 PAÍSES AO REDOR DO MUNDO! 
             </CardDescription>
           </CardContent>
           <CardSkeletonBody>

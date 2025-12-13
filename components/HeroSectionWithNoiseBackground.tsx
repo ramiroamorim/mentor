@@ -28,7 +28,7 @@ export function HeroSectionWithNoiseBackground() {
           transition={{ duration: 0.3 }}
           className="text-center text-5xl font-bold tracking-tight text-neutral-800 md:text-3xl lg:text-5xl dark:text-neutral-100"
         >
-          R$160.000 de lucro liquido <br /> em apenas 7 dias
+          Uma das maiores oportunidades do tráfego direto! <br /> Tráfego inteligente, e branding para seus infoprodutos...
         </motion.h2>
      
 
