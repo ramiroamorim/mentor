@@ -29,11 +29,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
-        <script
-          defer
-          src="https://track.ramiroamorim.com.br/script.js"
-          data-website-id="619d2723-ec69-4ba5-9a28-1c7ca43dec5c"
-        />
+   
 
         {/* Facebook Pixel - Base Script (sem init ainda) */}
         <Script id="facebook-pixel" strategy="afterInteractive">
@@ -71,7 +67,7 @@ export default function RootLayout({
 
           {children}
         </ThemeProvider>
-
+ 
    
       </body>
     </html>
