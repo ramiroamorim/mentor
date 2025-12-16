@@ -4,7 +4,6 @@ import "./fonts.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
 import { TrackingInit } from "./components/trackingInit";
-import { AmplitudeInit } from "@/components/AmplitudeInit";
 import { FacebookPixelInit } from "./components/FacebookPixelInit";
 import Script from "next/script";
 
@@ -93,12 +92,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-         <AmplitudeInit />
+   
           <TrackingInit />
           <FacebookPixelInit />
-
-
-          {children}
+         {children}
         </ThemeProvider>
  
    
