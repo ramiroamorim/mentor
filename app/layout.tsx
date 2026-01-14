@@ -67,17 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1363853995230465&ev=PageView&noscript=1"
-            alt="Facebook Pixel"
-          />
-        </noscript>
       </head>
-   
 
 
    <body className={cn("antialiased bg-black font-adero")}>

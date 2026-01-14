@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { HiArrowRight } from "react-icons/hi2";
-import FilloutForm from "./FilloutForm";
 import { sendTrackingEvent } from '@/lib/trackingUtils';
 
 export function CtaBack() {
@@ -83,9 +82,7 @@ export function CtaBack() {
           >
             ✕
           </button>
-          <div className="w-full h-full">
-            <FilloutForm />
-          </div>
+        
         </div>
       )}
     </section>

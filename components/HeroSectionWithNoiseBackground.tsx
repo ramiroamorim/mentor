@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import FilloutForm from "./FilloutForm";
 import { sendTrackingEvent } from '@/lib/trackingUtils';
 export function HeroSectionWithNoiseBackground() {
   const [open, setOpen] = useState(false);
@@ -73,35 +72,14 @@ export function HeroSectionWithNoiseBackground() {
           >
             ✕
           </button>
-          <div className="w-full h-full">
-            <FilloutForm />
-          </div>
+         
         </div>
       )}
     </div>
   );
 }
 
-const Badge = ({ text }: { text: string }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="relative mx-auto mb-6 flex w-fit items-center justify-center overflow-hidden rounded-full p-px"
-    >
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-transparent via-transparent to-blue-500"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-        style={{ width: "300px", height: "20px" }}
-      />
-      <div className="relative z-10 rounded-full bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100">
-        {text}
-      </div>
-    </motion.div>
-  );
-};
+
 
 const Background = () => {
   const [strips, setStrips] = useState<number[]>([]);

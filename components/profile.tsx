@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
-import FilloutForm from "./FilloutForm";
+
 import { sendTrackingEvent } from '@/lib/trackingUtils';
 
 export function Profile() {
@@ -69,9 +69,7 @@ export function Profile() {
           >
             ✕
           </button>
-          <div className="w-full h-full">
-            <FilloutForm />
-          </div>
+         
         </div>
       )}
     </div>
