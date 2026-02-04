@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 import { sendTrackingEvent } from '@/lib/trackingUtils';
@@ -30,19 +31,21 @@ export function Profile() {
         </h2>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto px-4">
+      <div className="flex flex-col md:flex-row items-center gap-6 max-w-2xl mx-auto px-1">
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="profile-image">
-            <img
+            <Image
               src="/imagem-carro-placa.jpeg"
               alt="Carro"
+              width={400}
+              height={300}
               className="rounded-lg shadow-2xl w-full max-w-sm h-auto"
             />
           </div>
         </div>
 
         <div className="w-full md:w-1/2">
-          <p className="text-base md:text-lg font-bold text-center md:text-left text-neutral-400 leading-snug md:leading-relaxed">
+          <p className="text-base md:text-lg ">
             Ramiro Amorim é um jovem empresário que descobriu o mercado de infoprodutos globais no final do ano de 2023! Desde então sua vida mudou completamente.
             <br />
             Já faturou 4.8 Milhões de reais nos últimos meses com uma estratégia pouco conhecida sobre vendas de infoprodutos no tráfego direto multi moedas.
@@ -54,7 +57,7 @@ export function Profile() {
             Então em alguns meses conseguiu sair do absoluto zero e faturar milhões sem aparecer e agora quer compartilhar este conhecimento com pessoas dedicadas a conhecer este modelo de negócio.
           </p>
           <div className="mt-6 flex justify-center md:justify-start">
-            <button onClick={handleClick} className="rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-10 py-4 text-lg font-bold text-black shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] hover:from-red-700 hover:to-red-800 transition-all duration-200">
+            <button onClick={handleClick} className="rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-10 py-2 text-md font-bold text-black shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] hover:from-red-700 hover:to-red-800 transition-all duration-200">
               AGENDAR MINHA REUNIÃO
             </button>
           </div>

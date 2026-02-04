@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { HiArrowRight } from "react-icons/hi2";
 import { sendTrackingEvent } from '@/lib/trackingUtils';
 
+ 
 export function CtaBack() {
   const [open, setOpen] = useState(false);
 
@@ -55,18 +57,18 @@ export function CtaBack() {
         </div>
       </div>
       <div className="relative flex h-full max-h-[200px] w-full gap-4 overflow-hidden px-4 md:max-h-[400px]">
-        <img
+        <Image
           src="/envato-labs-image-edit.webp"
           alt="cta-1"
-          width="250"
-          height="400"
+          width={250}
+          height={400}
           className="mt-4 h-full rounded-lg object-contain md:mt-0 md:rounded-none"
         />
-        <img
+        <Image
           src="/euro-up.png"
           alt="cta-2"
-          width="300"
-          height="500"
+          width={300}
+          height={500}
           className="mt-10 h-full rounded-lg object-cover object-top"
         />
       </div>

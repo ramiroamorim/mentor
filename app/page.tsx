@@ -2,12 +2,11 @@
 'use client';
 
 import { BackgroundLines } from "@/components/ui/BackgroundLines";
-import { HeroSectionWithNoiseBackground } from "@/components/HeroSectionWithNoiseBackground";
-import { BentoGrid } from "@/components/BentoGrid";
-import { EmblaCarousel } from "@/components/EmblaCarousel";
-import { CtaBack } from "@/components/CtaBack";
-import { Profile } from "@/components/profile";
+import { HeroSectionWithNoiseBackground as Hero } from "@/components/Hero";
 
+import { EmblaCarousel } from "@/components/EmblaCarousel";
+import { CtaBack as CtaNoise } from "@/components/CtaNoise";
+import { Profile } from "@/components/profile";
 
 export default function Home() {
   return (
@@ -17,22 +16,27 @@ export default function Home() {
       </div>
       <div className="relative z-10">
 
-        <HeroSectionWithNoiseBackground />
-        <BentoGrid />
+        <Hero />
+     
+
 
         {/* Texto introdutório do carrossel */}
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-1xl mx-auto px-3 sm:px-4 lg:px-8 py-8">
           <h2 className="text-2xl md:text-4xl font-bold text-white text-center border border-white rounded-lg p-6">
             Olhe alguns de meus resultados do mês passado
           </h2>
         </div>
 
         <EmblaCarousel />
-        <CtaBack />
+        <CtaNoise />
         <Profile />
+
+
+
     
 
    </div>
     </div>
+
   );
 }

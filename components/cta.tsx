@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect } from "react";
-import { Button } from "./button";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation, useInView } from "motion/react";
 
@@ -175,9 +174,7 @@ export default function CTA() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="relative z-20"
         >
-          <Button className="h-10 md:h-12 lg:h-16 w-32 md:w-40 lg:w-48 rounded-full text-xs sm:text-sm md:text-base font-medium">
-            Aprender Mais
-          </Button>
+        
         </motion.div>
       </motion.div>
       <LineGradient position="right" />
