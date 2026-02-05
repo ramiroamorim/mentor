@@ -8,7 +8,7 @@ import Image from "next/image";
 export function EmblaCarousel() {
     const [emblaRef, emblaApi] = useEmblaCarousel(
         { loop: true },
-        [Autoplay({ delay: 2000, stopOnInteraction: false })]
+        [Autoplay({ delay: 3000, stopOnInteraction: false })]
     )
 
     useEffect(() => {
@@ -41,6 +41,15 @@ export function EmblaCarousel() {
     ]
 
     return (
+        <>
+        {/* Texto introdutório do carrossel */}
+        <div className="my-5 px-2">
+          <h2 className="text-1xl md:text-2xl font-bold text-regular text-center border border-white rounded-lg p-4">
+            Olhe alguns de meus resultados do mês passado
+          </h2>
+        </div>
+
+
         <div className="embla" ref={emblaRef}>
             <div className="embla__container">
                 {slides.map((slide) => (
@@ -48,14 +57,15 @@ export function EmblaCarousel() {
                         <Image
                             src={slide.image}
                             alt={slide.alt}
-                            width={800}
-                            height={600}
+                            width={500}
+                            height={300}
                             className="w-full h-auto object-contain rounded-lg"
                         />
                     </div>
                 ))}
             </div>
         </div>
+        </>
     )
 }
     

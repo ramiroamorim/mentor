@@ -17,18 +17,8 @@ export default function Home() {
       <div className="relative z-10">
 
         <Hero />
-     
-
-
-        {/* Texto introdutório do carrossel */}
-        <div className="max-w-1xl mx-auto px-3 sm:px-4 lg:px-8 py-8">
-          <h2 className="text-2xl md:text-4xl font-bold text-white text-center border border-white rounded-lg p-6">
-            Olhe alguns de meus resultados do mês passado
-          </h2>
-        </div>
-
-        <EmblaCarousel />
         <CtaNoise />
+        <EmblaCarousel />
         <Profile />
 
 

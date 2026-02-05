@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { HiArrowRight } from "react-icons/hi2";
 import { sendTrackingEvent } from '@/lib/trackingUtils';
 
  
@@ -50,10 +49,7 @@ export function CtaBack() {
             
           </p>
 
-          <button onClick={handleClick} className="group mt-8 flex items-center space-x-2 rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-4 py-2 text-base font-bold text-black shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] hover:from-red-700 hover:to-red-800 transition-all duration-200">
-            <span>AGENDAR A MINHA REUNIÃO</span>
-            <HiArrowRight className="mt-0.5 h-3 w-3 stroke-[1px] text-black transition-transform duration-200 group-hover:translate-x-1" />
-          </button>
+    
         </div>
       </div>
       <div className="relative flex h-full max-h-[200px] w-full gap-4 overflow-hidden px-4 md:max-h-[400px]">
@@ -65,7 +61,7 @@ export function CtaBack() {
           className="mt-4 h-full rounded-lg object-contain md:mt-0 md:rounded-none"
         />
         <Image
-          src="/euro-up.png"
+          src="/euro-new.png"
           alt="cta-2"
           width={300}
           height={500}
